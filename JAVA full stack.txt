@@ -1,0 +1,899 @@
+                                       JAVA FULLSTACK
+------------------------------------------------------------------------------------------->
+
+                                     WHY JAVA ?
+                                 --------------------
+* High level programming language 
+*Platform independent
+* Simple Syntax is easy
+*Java is object oriented programming
+* Extensible Language (Combine diff. Languages like c or python and Developed something
+* Robust (Program will not crash . Viruses can't Effect)
+*Java has automatic garbage collector(automatic garbage collection means that the Java Virtual Machine (JVM) automatically manages memory by freeing up space used by objects that are no longer reachable or needed by the program) 
+
+                    KIND OF APPLICATIONS CAN BE DEVELOPED USING JAVA 
+                   ---------------------------------------------------
+* WEB applications
+*Business applications
+*Mobile applications
+*Desktop applications
+*Scientific applications as well 
+
+
+JAVA IS STARTED BY THE COMPANY NAMED " SUN MICROSYSTEM " AND CURRENTLY OWNED BY DATABASE COMPANY THAT IS " ORACLE "
+
+                           HOW DOES A JAVA PROGRAM WORKS 
+                         ----------------------------------
+  JAVA program in High level language ---> SAVE it into demo.java ----> COMPILE to check the     error in code ---> After successfully compilation a byte code (intermediate code) will generate (all byte code extension is  " demo.class " [Intermediate codes are one  who neither human nor computer or machine understandable language ]
+
+Every machine that includes ," windows , linux ,macOS , unix " all having JVM (java virtual machine) that helps particular system to understand Byte code that can't be understandable by machine normally ---> After reading Byte code JVM interpret the code into machine level language and then Execute it Line by Line.
+
+If compilation unsuccessful ----> Error report -----> Debug 
+
+JVM is platform dependent
+      
+                           WORA Architecture :--
+
+Write Once Run Anywhere
+
+                           VARIABLES
+                         -------------
+Variables are Containers in order to store some data or information.
+
+                           DATATYPES
+                       ----------------
+Datatypes are used to indicate the type of data stored into a variable.
+  Byte < short < Int < long (Non-Decimal value)
+  Float(32 bit) < Double(64 bit ). (Decimal numeric values)
+  Boolean ( 1 bit) True and false 
+  Char (Single character) ---> 16 bits.   Use Single quotation (' ')
+    1 BYTE = 16 BITES
+  String ---> Sequence of Characters (Enclosed in double quotation " "  String doesn't have  memory size till now
+  JAVA IS CASE SENSITIVE LANGUAGE IT MEANS (a != A)
+
+                        VARIABLE DECALARATION
+Syntax : datatype  variablename;
+    1.    Int age;
+    2.    Float percentage;
+                       
+                        VARAIBLE INITIALIZATION
+Syntax : variablename = value;
+         Age = 25;
+         Value = 5.5;
+         
+                        Variable Decalaration and Initialisation 
+                      --------------------------------------------
+Syntax : datatype variable = value;
+         Int age = 24;
+         String name = "Manoranjan";
+         Char gender = 'M';
+         
+                       STRUCTURE OF A JAVA PROGRAM
+                      -----------------------------
+clASS ---> Main method ---> Print statement 
+
+Creation of class 
+                  Class className {
+
+                                  ------SCOPE OF CLASS ----
+
+                            Public static void main(string[]args);   MAIN METHOD  {
+
+                               ----SCOPE OF MAIN METHOD------
+
+
+                            System.out.println( " " );
+
+                                                  }
+     
+                                            }
+
+                            OPERATORS
+                        -----------------
+1. Arithmetic operator ( + ,- , * ,% , /). [ 10/2 = 5 ,10%2 = 0)
+2.Assignment operators ( = , += , -= , =/ , =%)
+3.Relational/Comparison operators ( == ,>= , <= ,> , < ,!=)
+4.Logical operators(&& ,||.!) 
+5.Unary operators(++ , -- )
+6.Ternary operator(condition?true : false ;) 
+
+POST & PRE Increment : in post first assign the value and then increment but in the case of Pre increment first increment then assign
+
+                              Conditional statement
+                             -----------------------
+1.Simple if : if the condition is true , do something otherwise nothing to do
+     Syntax:  if(---condition--){
+
+                                 ---true---
+
+                                        }                     
+2.If else : 
+     Syntax : if(--condition--){
+                               // set of instructions.   
+   
+   --- if condition is true if block will e executed ---
+                                }
+              Else{
+  ---- if condition is false else block will be executed ---
+                     }
+
+3. If else if 
+   Syntax:  if(condition){
+                            ----------
+                              }
+            Else if(condition){
+                            ----------
+                                 }
+             Else if(condition){
+                            ----------
+                                 }
+            Else{
+                           ---------
+                        }
+4.Nested if : if inside if 
+    Syntax: if(condition){
+                     if(condition){
+                    --------------
+                         }
+                }
+
+5.Switch : Character comparison
+
+   Syntax: switch( choice )
+           {
+            
+             Case 1:
+                     Break;
+             Case 2:
+                     Break;
+               |
+               |
+               |
+             Case n:
+
+
+             Default:
+
+                     }
+                             LOOPING STATEMENT
+                           ---------------------
+1. For loop  : It is used to REPEAT some set of instructions , also is used for TRAVERSING purpose 
+    Syntax:
+             for(initialisation; condition; updation;){
+                   ---- // set of instructions -----
+                                       }
+
+  In condition lesser than(<=) is used for reverse direction while in greater than is used for forward direction.
+
+
+2.while loop : is a looping statement that keeps on executing until the condition is false.
+
+    Syntax:  while(condition)
+                {
+                   ---- // set of instructions ---
+                         }
+3.do-while loop : same as while loop but do while first execute set of instructions and then check the condition
+   Syntax : do 
+              {
+
+             ---- // set of instructions ---
+               }
+            While(condition);
+
+4.nested for loop : for loop of outside run ones while the inner for loop run until the condition is satisfied
+   Syntax : for(initialisation; condition; increment)
+{
+
+                   for(initialisation; condition; increment){
+             }
+           }
+
+                              OOPS(Object oriented programming)
+                             -----------------------------------
+Object: object is something that have some name and having existence in real world.
+         Ex : Car, human , liquids etc,
+        
+Object is divided in to two parts I.e, * States(used to store data and another one is 
+                                       * Behaviour(to perform some task)
+
+ In programming perspective object --> refer to class name
+
+                            States --> refer to variables/data member
+                            Behaviour --> methods/functions
+
+Class : 1. It is a " Blueprint " of object
+        2.Platform to store variables(states) and methods(Behaviour) here
+        3. Class is a logical entity
+        4. Keyword used is class
+        5. Class can be used as datatypes
+
+  Syntax: class classname 
+          {
+            -----  Scope of class ----
+               // can store Methods
+               // store Variables
+               // store constructors
+               // store blocks
+Variables : static :  ex ; static int age =20 
+            Non-static : ex variable with no static keyword;
+
+Object creation or instantiation (Object is a copy/instance of a class) 
+
+1. Store it in the memory
+2. Memory allocated in the heap area
+3. "NEW" operator id responsible for creating the object
+4. We can create multiple objects for a same class 
+5. In order to access the attributes we use dot operators (.)
+
+ If we have to create an object we need to use of 
+
+  Syntax: classname objectreferncename = new  classname();        
+     objectreferncename can be written as your name , my name or any name
+ Example:
+      Class Pen {
+                    }
+   Creating object for the class name pen
+
+       [ Pen p = new pen();].  We create object to store all the non static properties within the memory
+To access any variables we make use of 
+Syntax : objectname.variablename
+
+# DEFAULT value : if a variable is declared and not  initialised to any value , by default it gives output as 0.
+   JAVA does not give GARBAGE VALUE like other languages instead of this java has default for each datatypes
+   * byte,short,int,long -----> 0
+   * float double ----> 0.0
+   * char ----> '/n10' (unicode value )java doesn't understand so he just give an empty space ( ). 
+   * boolean ----> false
+   * string ---> null
+Default values for both static and non-static values
+
+                       METHODS
+                      ----------
+Methods is a set of instruction that performs specific tasks
+  Syntax: AccessSpecifier returntype methodname( "Arguments/inputs" )
+                             {
+                       ------scope of method------
+                     //set of instructions 
+
+                    //return statements---
+                                      }
+Different ways of writing a method
+1.Method without arguments & without return statement.
+2.Method with arguments & without return statement.
+3.Method without arguments & with return statement.
+4.Method with arguments & with return statement.
+
+# In order to execute a method  we have to call the method or invoke it 
+  Syntax : objectName.methodname();  
+
+## If method is returning some value then we have to store it in some variable and utilise it somewhere.
+
+                      Method Overloading(Compile time polymorphism)
+                      --------------------------------------------
+In a class having multiple methods with the same name but with the different argument , is called method overloading
+
+To achieve method overloading we need to achieve either 1 of the 3 rules
+1.there should be a change in the no. of arguments.
+2.there should be a change in the datatypes of the arguments.
+3.there should be a change in order/sequence of the datatypes.
+
+ # NOTE :- we can overload main method as well.
+           Method overloading is also called as compile time polymorphism
+  
+                        Scanner 
+                     -----------
+Scanner is a pre-defined class in java.util package
+Scanner class is used to accept dynamic input from the user
+ 
+Rules to accept dynamic input from the user (or) rules to work around with scanner class
+1.Create an object of scanner class.
+2.Pass system.in to the constructor call
+ Syntax: Scanner scan = new scanner(system.in); 
+3.import scanner class from java.util package.
+ Syntax : import java.util.scanner;
+4.make use of predefined method to accept dynamic input.
+ Note :- Scanner class will not run in parallel
+
+Important I\method used with respect to scanner class
+
+1.byte -> nextbyte()
+2.short -> nextshort()
+3.long -> nextlong()
+3.int -> nextint()
+4.double -> nextdouble()
+5.char -> next().charAt(0)
+6.boolean -> nextboolean()
+7.String -> next() , nextline()
+
+                         
+                        STATIC AND NON-STATIC
+                     -------------------------
+STATIC
+1.static is a keyword which can be used used with class, variables, methods and blocks.
+2.the class loader loads all the the static properties inside a memory location called as class area or static tool.
+3.static properties has to  accessed with help of classname in the SAME Class.
+4.static properties has to  accessed only with the help of classname in the Different/another Class.
+  Syntax :classname.variablename.  or classname.methodname()
+NOTE :- Static properties are loaded once so ,therefore they will have a single copy.
+
+##Static variables can be reinitialise.
+.Outer class can't be static but we can have static class by creating nested class(inner class can be static)
+    Class A{
+         Static ClassB{
+
+    } 
+}
+
+BLOCKS :- blocks are the set of instructions use for initialisation.
+          
+When we use static block method it will implement always before the main method in any condition.
+ Static blocks is of two types :
+ 1. Static :- use for initialisation of static variables
+ 2.non - static :- execution will happen in sequential manner if the object is created for the respective class.
+              Object creation ->sequentially executed
+
+JDK : Java development kit , is a software that contains all the important resources from developing a java program and executing a java program.
+      It also contains all the development tools and libraries (compiler,interprete,libraries and all)
+JRE : Java run time environment , is a software that provide a platform to execute a java program.
+     JRE includes things that is. ---> 
+     1.JIT compiler (Just in time compiler)
+     2.class loader :- class loader will load the class from secondary storage to executable area.
+     3.interpreter :- this will interpret the code line by line
+     4.JVM :- java virtual machine , it is a manager of JRE
+                
+JVM Architecture : 
+1.Heap Area : objects get created here
+2.class area or static pool - all static members gets stored here.
+3.tack - execution happens inside stack
+4.method area : implementation of method stored here
+5.Native area
+
+                         CONSTRUCTORS
+                       -----------------
+1.Constructors are set of instructions/special methods used for initialisation(initialising the value) and Instantiation(object creation).
+2.For the creation of constructor the class name and constructor name should be same
+3.Doesn't have  return type
+4.Constructor will executed whenever we will create an object.
+5.Syntax : Access specifier   className( --optional arguments--)
+                  {
+                   -----scope of constructor---
+                   }
+6.There is two types of constructors 
+  * Default constructor(neither having argument nor having implementation)
+  * custom/user-defined constructor(parameterised and non-parameterised)
+
+# Global/member variable and local variable
+  Global : a variable declared in a class is global ,this variable can be accessed from anywhere
+           Two types static and non-static variables.
+  Local : a variable declared in specific scope here is a member
+Note :if variable name is same then always local variable will be executed.
+
+THIS keyword
+-------------
+This is a keyword which is used to point the current object/instance.
+    It is used when local variable and member variable name is same.
+
+                           INHERITANCE
+                         ----------------
+Inheritance is  used to inherit the property of superclass(giving the properties) in subclass(accepting the properties)
+1.EXTENDS is a keyword that is used to achieve inheritance
+2.inheritance is also referred as - IS-A relationship
+3.variable and methods can be inherited from one class to another
+Types of inheritance:
+* Single level : Class B(sub class, derived class) ---extends----> class A(super class or base class) 
+* Multilevel : is a combination of multiple super and sub classes in a sequential manner
+* Hierarchial : one super class having multiple sub classes
+* multiple : multiple super class having one sub class.(** multiple inheritance is not supported in JAVA)
+* hybrid : accepted at some instance
+
+## Constructor overloading
+---------------------------
+--constructor overloading's concept is same as method overloading.
+
+Constructor chaining :
+----------------------
+One constructor calling another constructor(there should be multiple constructor)
+Constructor chaining can be achieved by :--
+1.this(). (this calling statement) -- in same class
+2.super() --super calling statement in another class, is-a relationship is mandatory.
+
+                        METHOD OVERRIDING
+                      ---------------------
+Method means set of instructions that perform some specific tasks 
+Whereas overriding means changing or modifying something
+@Override is used when a subclass provides a new implementation of a method that is already defined in its superclass (or interface).
+Annotations are not compulsory to use but it is good practice while we are inheriting the property of super class.
+Definition : - the process of inheriting the method and changing the implementation/definition 
+               Of the inherited methods called as method overriding.
+To achieve method overriding rules to be followed:
+1.Method name must be same
+2.Argument should be same
+3.returntype should also be same.
+
+## FINAL KEYWORD : it is a keyword that can be used with method , variables and class.
+   Final variable act as a constant. When we use final before any datatype it becomes constant.
+   Final method can be inherited but it can't be override/modified.
+   Final class can't be inherited at all.
+
+                            ARRAYS
+                           ---------
+Array is a container where we store group of elements
+Specification :
+1.Homogeneous
+2.are of fixed size
+3.arrays are of index based (starts from 0 )
+* Array Declaration
+  Syntax : datatype[]  arrayname;
+     int[] marks;
+     doubke[] a;
+* Array creation
+  Syntax : Arrayname = new datatype[size];
+      Marks = new int[3];
+      A = new double[100];  
+* Array declaration & creation in single line
+  Syntax : datatype[]  Arrayname = new datatype[size]; 
+           int[] Arr = new. Int[10];
+* Array initialisation
+  Syntax :Arrayname[index] = value;
+* Array initialisation. Directly
+   Syntax : Datatype[] arrayname = {.      };
+            int[] a = {1,2,3,4,5};
+NOTE :- Length is a predefined keyword that is used with dot operator to find the length of array.
+
+                             PACKAGES
+                          ---------------
+1.packages are nothing but folder or directory
+2.packages are used to store classes and interfaces,
+3.searching becomes easy.
+4.better maintenance of the program.
+
+Example :-
+ Package com.google.gmail;
+  Class inbox {
+        }
+                             ACCESS SPECIFIER/ACCESS MODIFIERS
+                            -----------------------------------
+Types of Access specifier :
+
+1.public 
+2.Private
+3.Protected
+4.Default
+
+NOTE : - java.util.scanner : it used to import only one scanner class has bee imported.
+         Java.util.* : is used to import all classes from java.util package
+
+                              ENCAPSULATION
+                         --------------------
+Encapsulation is the process of binding , grouping or wrapping variables(Refer as data members) and methods(Member function) in a single entity called as class .
+ Java BEAN CLASS is the best example of encapsulation   
+GETTER(to read the data) an SETTER(To write the data) is only used for private variables.
+To achieve encapsulation class should be 
+
+##Advantages of encapsulation
+1.validation can be done(we can protect the data from the illogical initialisation.
+2.data can be made  either read only or write only.
+
+                                TYPECASTING
+                             ---------------
+Converting one type of data in to other ones
+Two types of typecasting
+1.Primitive : - Widening & narrowing
+
+ Widening : - conversion of small data to big data implicitly(automatically)
+    Ex: byte --> short --> int --> long --> float --> double
+ Narrowing : - conversion of bigger type of data to smaller type of data we have to always do it explicitly.
+    Ex: double --> float --> long --> int --> short --> byte
+        Double x  = 3.45;
+        Short y = (x)short;  (to convert we have to do it explicitly)
+** we can find ASCII value of any number using typecasting by narrowing (char --> int)
+In java float is declared by three ways. :
+  Float a = 3.5f;
+  Float b = 3.5F;
+  Float c = (float)3.5;
+In java to declare long value we have to declare like this
+  Long x = 234356586l;
+  Long y 8778786868L;
+2.Non-primitive casting or derived casting or Class type casting : - upcasting & downcasting
+ UPCASTING: 
+ * creating an object of sub class , and storing it's address a reference of type superclass.
+ * with upcasted reference we can access only superclass members/properties.
+ * in order to achieve upcasting , IS-A relationship mandatory(inheritance is mandatory).
+ * superclass reference , subclass object.
+ 
+ DOWNCASTING
+ * the process of converting the u-casted reference back to subclass type reference is called down casting.
+ * with the subclass/downcasted reference we can access both superclass and subclass members properties.
+ * in order to achieve down casting upcasting is mandatory.
+ * down casting has to done explicitly. 
+   Syntax : (subclassName) superclassreference
+
+## Specialisation 
+   A class EMPLOYEE having three sub-classes Developer, HR and tester 
+    in specialisation we can create object like this for each
+    1.tester  t = new tester();
+    2.developer d = new developer();
+    3.HR h =  new HR();  
+## Generalisation
+   A class EMPLOYEE having three sub-classes Developer, HR and tester 
+    We can create object by using only 
+                   = new HR();
+       Employee e = new Developer();           
+                   = new tester();
+*** major Advantage of upcasting is generalisation .
+ 
+                                CLASS CAST EXCEPTION
+                              --------------------------
+1.if a object has been upcasted we have to downcast to same type else we get classcastexception.
+2.in other words , if one type of reference is upcasted and downcastede to some other type of reference we get classcastexception.
+3.if we downcast , without upcasting even then we get classcastexception.
+ 
+In order to avoid classcastexception we make use of instanceof operator
+
+INSTANCEOF
+----------
+1.instanceof is an operator in order to check if an object is an instance of a specific class type or not.
+2.in other words, instances is an operator in order to check if an object is having the properties of a specific class type or not.
+3.instanceof will return boolean value.
+ 
+                                  POLYMORPHISM
+                                ----------------
+--> polymorphism means - Many forms
+    Ability of a specific method to behave differently to exhibit different forms when different objects are acting upon it.
+Two types of polymorphism :
+1.Compile time polymorphism(Method overloading)
+
+2.Run time polymorphism(IS-A relationship , Method overriding & upcasting)
+
+                                     ABSTRACT
+                                 ---------------
+Abstract is a keyword that can be used w.r.t to a class and method
+1.Abstract class
+  Abstract class have constructors, but we cannot invoked indirectly, it has to be invoked by sub class either implicitly or explicitly user super().
+  We cannot create object of an abstract class 
+  We can inherit an abstract class
+  Abstract class store both concrete method and abstract method
+2.Abstract method
+  Abstract method cannot be private,tatic and final(final method cannot be overridden).
+ It has only declaration not implementation
+  Syntax: Accessspecifier abstract returntype methodname();
+       E.g public abstract void M1();
+3.concrete class : if a class not declared with abstract keyword is called a concrete class.
+  :concrete class store only concrete methods.
+4.concrete method
+
+** what we do when a class extends abstract class :
+1.when a class inherit abstract class, override all abstract methods.
+2.when a class inherit abstract class, and we do not want to override the abstract method, then make the subclass as abstract class.
+
+                                    INTERFACE
+                                 ---------------
+It is a java type definition declared using interface keyword.
+Similar to class where class is declared using class keyword and interface is declared using interface keyword.
+Interface is a medium between two systems where one system is a client and other one is object with services.
+  Example : TV --interface(remote)----user
+            Fan---interface(switch)----user  
+Syntax : interface interfaceName 
+           {
+             ---Scope of interface----
+               }
+Interface have variables -- public, static and final.
+Interface supports IS-A relationship but uses implements keyword instead of extends keyword.
+  Interface --> to class ,no relation.
+  Interface --> to interface , use extends keyword.
+  Class --> to class, use extends keyword
+  Class --> to interface ,implements keyword.
+While overriding a method the access specifier should be same or of higher visibility(like public to public, private to public, default to private and so on).
+
+<<.  >> ---> Stereotypes ---> represents interfaces.
+C.  --> class
+-> normal arrow marks means extends
+......> dotted arrow marks means implements
+**  A class can implements many number of interfaces.
+** A class can extend another class and implements many number of interfaces.
+Interfaces does not have constructors.
+We cannot creates objects of interfaces and abstract class but we can only create object for the concreted class.
+
+                                  ABSTRACTION
+                                ----------------
+The process of hiding the implementation details(unnecessary details)and showing only the functionalities(behaviour) to the user with the help of an abstract 
+Class or interface is called abstraction.
+Abstraction can be achieved by following the flow rules :
+  I.  Abstract class or interface
+  II. IS-A(inheritance).
+  III.Method overriding.
+  IV .Upcasting
+                                  LIBRARIES
+                             -----------------
+Java libraries is a collection of predefined packages.
+Each packages is collection of classes and interfaces.
+In each package and folder we store variables and methods.
+** All the predefined packages are present inside the .zip file (compressed file) and I.e, called as src.zip(src stands for source).
+** or it might present in .jar file or that file is called as rt.jar (rt stands for runtime)
+ 
+JAVA LIBRARIES
+
+1.java.util
+  Includes classes are : Scanner , Arraylist ,hashset ,<<collection>>
+2.java.lang(Automatically imported no need to create java.lang.thread like that we do in util)
+  Includes classes are : Object ,String ,Thread , <<comparable>>
+3.java.io
+  File
+  File reader
+  File writer
+ 
+## TO- STRING METHOD(String representation)
+   Syntax : public String toString()
+  - toString() returns the string representation of an object in the below format.
+     FullyQualifiedclassName @ HexadecimalValueofThehashcode 
+** When we try to print any object reference toString method will be called
+toString method is  a method that present in object class.
+** if we not overridden he toString method it will give output as a hexadecimal value but if we override them it will return String value .
+
+DTATYPES : - Primitive --> (Predefined keyword)Keyword -- and having fixed size it is only 8.
+                 (Byte,short,int ,long, boolean,char,float , double)
+           - non-primitive datatypes -- class --no fixed size
+                  (String having no fixed size and default value for string is NULL).
+   When a classs behave as a datatype it is called as non-primitive.
+
+##HASH CODE METHOD(Unique id for an object)
+ Syntax : public int hashcode()
+ Hashcode() is used to identified an object uniquely.
+ hashcode() return a number or id to uniquely identified an object.
+
+## EQUALS() : (content comparison)
+  Syntax : public boolean equals(object obj)
+  1.equals is used to compare the content/members of two objects.
+  2.equals() is used fro content comparison.
+
+** (==) & (.equals ) method will check for addresses internally
+
+## this is the program for without overriden EQUAL method
+package equalslibraries;
+
+public class comparingobjects {
+    public class student {
+        int age;
+
+        student(int age) {
+            this.age = age;
+        }
+    }
+
+    public static void main(String[] args) {
+        // Object creation for outer class
+        comparingobjects cobj = new comparingobjects();
+        //object creation for inner class
+        student s1 = cobj.new student(22);
+        student s2 = cobj.new student(23);
+
+        System.out.println(s1 == s2); //OP is false
+        System.out.println(s1.equals(s2));  // Student one object is getting compared with student two object
+ // (==) & (.equals ) method will check for addresses internally
+    }
+}
+
+
+## Access specifiers of all three methods are public, accessible for everyone.
+## Return types of : to-String is String
+                   : Hashcode is int
+                   :  Equals is  Boolean
+
+                                 SINGLETON CLASS
+                               -------------------
+We will be able to create only one object for the respective class here.
+   Ex : Prime minister can be only one for a country.
+        You can have only one bank account in a particular bank.
+# Rules which we have to follow here.
+  * Declare the method as private , declare a Private constructor.
+  * have a public static helper method to create single object.
+  * Declare a private static non primitive reference variable.
+
+                                STRING CLASS
+                              -----------------
+* String is a pre-defined class in java.lang package.
+* String is a pre-defined final class & String class is immutable(can't be change or modified) in nature.
+* It is also a non-primitive datatypes and it returns NULL
+ We can create String object in two ways :
+   1. Literal
+       Ex:String s = "java";
+   2. New operator
+       Ex:String s = new String("java");
+// String pool : All string objects stored into a memory  location and that memory location is called as String pool.
+   * Constant pool 
+    -- Literal
+    -- Duplicates are not allowed 
+        It means if we are creating object of same type like String s1 = "java" and String s2 = "java "
+        It will point it to java only  
+   * Non-Constant pool 
+    -- 'NEW ' operator
+    -- Duplicates are  allowed
+       It means if we are creating object of same type like String s1 = new String("java") and String s2 = new String("java")
+        It will create two java object.  
+
+ String class automatically overriden 3 methods from object class
+ * toString()
+ * Equals()
+ * Hashcode()
+? How String objects are immutable? Explain String immutability  concept.
+ When we reinitialise a String object ,rather than modifying the same object a new object is created
+ and the reference point to the old object gets de-referenced and start pointing to the newly created object.
+
+## Mutable versions of String
+  1. Stringbuffer
+  2. Tringbuilder
+
+
+                             EXCEPTION HANDLING
+                           ----------------------
+Error is an interruption that happen during execution of a program occur during two scenarios   run-time and compile-time.
+Compile time (Syntax mistake ) 
+Run time (Executed the class without the main method.)
+* Errors cannot be handled ,which we have to debug it.
+Exception is a Event that happen in between the program that stops the execution of a program , we have to handle 
+  Therefore , the process of handling the Exception is called exception handling.
+* Typically the exception is handled using try and catch block.     
+# Exception hierarchy 
+# java.lang.ArithmeticException : means exception type is arithmetic  present in java lang package 
+  Try
+  {
+  ---Scope of try block---
+     // Set of instructions or set of lines that give an exception 
+  *** Internal working of Try along with catch block
+    // A object of Exceptionname will be created , where  we throwing an object of ex:arithmeticexception
+       That is caught by (reference variable ) e which is of type Arithmeticexception
+  }
+  Catch(Exception name   reference variable)
+  {
+  ---Scope of catch block--
+    // To give the solution for certain try block we use catch block  
+  }
+ 
+# if there is try block mandatorily catch block will be there.
+  Catch block only executed if the exception occurs.
+*   The solution should be written inside the catch block. 
+## INTERNALLY
+ * An object of Arithmetic exception is created
+ * the object is thrown
+ * It is caught by catch block
+
+* on entry block can have multiple catch block  
+* Between try and catch block there should be not be any executable lines of code but there can be comments I between 
+
+## if we are not sure of what type of exception is occur that's why it is always  a good practice to handle superclass exception at the last catch block
+
+## Error is a runtime interruption which cannot be handled but Exception is a runtime interruption which can be handled
+* Super class exception can handle all types of exception. 
+   Try {
+        }
+   catch(Exception e )
+       {
+        }  
+* printStackTrace(pre defined method present in throwable class) will be implemented in catch block , that print all the information about exception.
+* get Message is also a method that gives the  message about the region why the exception is occurring.(used to get small message)
+
+FINALLY BLOCK
+1. The set of instructions which has to be executed all the times to written  within the finally block
+2. Finally block is a block of code which get executed all the time.
+    I.e, irrespective of exception occurs or not.
+  Syntax :
+        Finally {
+ 
+###                 } 
+* it is possible to have nested Try and catch block 
+* it is also possible to have try and catch block inside finally block.
+X.length is used for Arrays
+x.length() method is used for string. 
+
+Exception is of two types :
+1.Checked Exception --> Compiler known --> Handled immediately --> Extends Exception class
+  * InterruptedException,Filenotfound  :  example of Checked exception. 
+2.Unchecked Exception --> compiler unknown --> handled not immediately -- > Extends Runtime Exception.
+  * Arrayindexoutboundexcep,ArithmeticException is Example of unchecked exception.
+//Filereader is a predefined class in java.io package.
+
+THROWS 
+Throw is a indication to the caller about the possibility about the exception
+Throw is used to propagate an exception.
+Throw is generally  used with checked exception.
+Typically we use throws with methods ,and we can use throws wrt constructor as well.
+
+CUSTOM EXCEPTION
+Exception that is made by the user is called user-defined/custom exception.
+Rules for working with custom Exception.
+1.Create a class with exception name.
+2.THe exception class which we created should either inherit exception(checked) or runtime exception(unchecked)class.
+3.create an object of exception class and  throw the object of that exception
+4.handle it using try and catch block.
+
+THROW
+Throw is keyword in order to invoke an object of exception.
+How is generally used with custom exception.
+ Syntax : throw objectofExceptiontype; // throw new exceptioname();
+
+                               COLLECTION/FRAMEWORK
+                            ---------------------------
+DATA STRUCTURE 
+* Way of storing/organizing the data.
+ Famous DATA Structures.
+ Stack,Queue,Array,Tree,Hashtable,Linkedlist ,.........
+
+Variable   : is container in order to store only One object
+Array      : is a container in order to store a group of object, that makes different from variable.
+Collection :is a container in order to store a group of object
+
+Difference between array and collection.
+Array :
+1. Stores homogeneous type of data
+2.It is of fixed size.
+3.Does not have any methods.
+4.Does not support Generics.
+
+Collection :
+1.Stores homogeneous and heterogeneous types  of data
+2.It is of dynamic size.
+3.Many pre-defined methods
+4.Support Generics.
+Collection : Collection is Pre-defined interface present in java.util package & it was introduced to the version JDk 1.2
+             Job of collection is to store group of objects
+ 
+Pre-defined method in collection interface
+1.Add()
+2.AddAll()
+3.Remove()
+4.RemoveAll()
+5.Contains()
+6.containsAll()
+7.isEmpty()
+8.clear()
+9.Size()
+10.Iterator()
+    
+LIST
+====
+* Is a pre-defined interface in java.util package introduced from jdk version 1.2
+  List has four implementation classes :Arraylist,vector, stack and linked list.
+List have certain Specifications.
+1.Insertion order
+2.Duplicates allowed
+3.indexed based.
+4.Null values can be inserted.
+
+Object creation
+
+       = new Arraylist();
+List L = new vector(); 
+       = new stack();
+       = new linkedlist();
+
+ArrayList()
+===========
+-> Pre defined class in java.util package
+-> JDK version 1.2
+-> 4 specifications
+-> Initial Capacity is 10.
+-> Incremental Capacity is (currentCapacity * 3)/2 + 1
+-> Underlined Data Structure  -> Resizable Array /Growable Array
+   ArrayList Implements list,Randomaccess,Cloneable,Serilizable.
+
+Pre-defined methods present in list-interface
+1.get()
+2.set(index, object)
+3.add(index,object)
+4.indexOf()
+5.lastndexOf()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
